@@ -17,14 +17,17 @@ years (60 steps)
 
 ## Repository Structure
 
-├── run.py
-├── model.py
-├── household.py
-├── parcel.py
-├── realtor.py
-├── single_run_scenarios.yaml
-├── requirements.txt
-└── data/ (not included)
+| File | Description |
+|---|---|
+| `README.md` | Project overview, setup instructions, and model description |
+| `run.py` | Main simulation runner |
+| `model.py` | Core agent-based model logic |
+| `household.py` | Household agent definitions and behavior |
+| `parcel.py` | Parcel and housing unit representation |
+| `realtor.py` | Realtor agent and pricing mechanisms |
+| `single_run_scenarios.yaml` | Scenario configuration settings |
+| `requirements.txt` | Python dependencies required to run the model |
+| `dummy_dataset.csv` | Synthetic example dataset included for demonstration and testing purposes |
 
 ## Installation
 
@@ -71,9 +74,13 @@ MIT License
 
 If you use this code, please cite:
 
-Mutlu, A., Filatova, T. (2026). Urban Housing Markets under Flood Risk...
+> Mutlu, A., & Filatova, T. (2026). *Urban housing markets under flood risk: Modeling demand pressure, risk perception bias, and public interventions*. Computers, Environment and Urban Systems, 128, 102440. https://doi.org/10.1016/j.compenvurbsys.2026.102440
 
 ## Contact
 
-Asli Mutlu (a.mutlu@tudelft.nl)
-Delft University of Technology
+**Asli Mutlu**  
+PhD Researcher, Delft University of Technology (TU Delft)
+
+- GitHub: [@asli-mutlu](https://github.com/asli-mutlu)
+- LinkedIn: [linkedin.com/in/asli-mutlu](https://www.linkedin.com/in/asli-mutlu/)
+- Email: a.mutlu@tudelft.nl
