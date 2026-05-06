@@ -23,8 +23,7 @@ years (60 steps)
 ├── parcel.py
 ├── realtor.py
 ├── single_run_scenarios.yaml
-├── requirements.rhea-min.txt
-├── environment.rhea-min.pinned.yml
+├── requirements.txt
 └── data/ (not included)
 
 ## Installation
