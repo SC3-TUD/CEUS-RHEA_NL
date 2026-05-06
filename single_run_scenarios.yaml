@@ -1,0 +1,82 @@
+_paths:
+  # You can use absolute paths OR paths relative to this YAML file.
+  dataset_csv: "YOUR PATH"
+  results_dir: "YOUR PATH"
+
+# -------------------------------------------------------------------
+# Single-run scenarios
+# -------------------------------------------------------------------
+
+# Example: Objective (unbiased) risk perception (CEUS paper Scenario S1a)
+S1a:
+  n_runs: 10
+  base_seed: 0
+  kY: 2
+  years: 30
+  buyer_demand: 1
+  buyer_util_method: EU_v1_Dutch
+  flood_probability_obj: 0.02
+  use_RP_bias: false
+  dynamic_income_groups: false
+  use_uniform_res_time: false
+  use_mortgage_debt: true
+  balance_sellers: false
+  seller_mode: Probabilistic
+  NbS_mode: distance_based
+  flood_risk_mode: uniform
+  listing_time_discount: 0.02
+  failure_adjustment: 0.05
+  max_failure_adjustment: 0.10
+  price_margin_bounds: [-0.05, 0.05]
+
+
+# Example: Biased risk perception on logit scale (CEUS paper Scenario S1d)
+S1d:
+  n_runs: 10
+  base_seed: 0
+  kY: 2
+  years: 30
+  buyer_demand: 2
+  buyer_util_method: EU_v1_Dutch
+  flood_probability_obj: 0.02
+  dynamic_income_groups: false
+  use_uniform_res_time: true
+  use_mortgage_debt: true
+  balance_sellers: false
+  seller_mode: Probabilistic
+  flood_risk_mode: distance_based
+  use_RP_bias: true
+  RP_bias_distribution: Beta
+  RP_bias_beta: [3, 2]
+  perception_space: logit
+  bias_channel: additive_logit
+  listing_time_discount: 0.02
+  failure_adjustment: 0.05
+  max_failure_adjustment: 0.10
+  price_margin_bounds: [-0.05, 0.05]
+
+# Example: S1d with NbS (CEUS paper Scenario S3)
+S3:
+  n_runs: 10
+  base_seed: 0
+  kY: 2
+  years: 30
+  buyer_demand: 2
+  buyer_util_method: EU_v1_Dutch_Env
+  flood_probability_obj: 0.004
+  dynamic_income_groups: false
+  use_uniform_res_time: true
+  use_mortgage_debt: true
+  balance_sellers: false
+  seller_mode: Probabilistic
+  NbS_mode: distance_based
+  flood_risk_mode: distance_based
+  use_RP_bias: true
+  RP_bias_distribution: Beta
+  RP_bias_beta: [3, 2]
+  perception_space: logit
+  bias_channel: additive_logit
+  listing_time_discount: 0.02
+  failure_adjustment: 0.05
+  max_failure_adjustment: 0.10
+  price_margin_bounds: [-0.05, 0.05]
