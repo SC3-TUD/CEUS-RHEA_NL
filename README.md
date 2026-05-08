@@ -1,19 +1,31 @@
 # RHEA-NL: Agent-Based Housing Market Model under Flood Risk
 
-Author: Asli Mutlu
-
 ## Overview
-This repository contains the code for the RHEA-NL agent-based model, developed to study housing market dynamics under flood risk and climate adaptation strategies.
+RHEA-NL is an agent-based housing market model developed to study how flood risk, housing market pressure, behavioral risk perception, and public climate adaptation strategies interact to shape urban housing market outcomes.
 
-The model builds on the original RHEA framework and introduces:
-- A rolling hedonic price mechanism via a Realtor agent
-- Behavioral flood risk perception
-- Policy scenarios including Nature-based Solutions (NbS)
+This repository contains the implementation of the model presented in [Mutlu and Filatova (2026)](https://www.sciencedirect.com/science/article/pii/S0198971526000426).
 
-The model is designed to analyze distributional effects, price dynamics, and spatial distribution of households and housing demand under different adaptation strategies.
+The model builds on the original RHEA framework [Filatova (2015)](https://www.sciencedirect.com/science/article/pii/S0198971514000714) and extends it with:
+- Competitive bidding and endogenous price formation under varying market demand pressure
+- Heterogeneous household flood risk perception and behavioral perception bias
+- Public adaptation scenarios including traditional flood defenses and Nature-based Solutions (NbS)
+- Spatial sorting and distributional dynamics in flood-prone housing markets
 
-Time scale: - 1 timestep = 6 months - Default simulation length = 30
-years (60 steps)
+## Time Scale
+
+- 1 timestep = 6 months
+- Default simulation length = 30 years (60 steps)
+
+## Key Findings
+
+Using scenario experiments in a stylized Dutch housing market, the model shows that:
+
+- Housing market scarcity and demand pressure are the primary drivers of exclusion and price growth
+- Behavioral flood-risk underestimation weakens capitalization of objective flood risk into housing prices
+- Public flood protection mainly reallocates housing demand spatially rather than substantially improving overall affordability
+- Nature-based Solutions (NbS) produce modest additional amenity-driven price effects, while most exclusionary dynamics are driven by pre-existing housing scarcity and demand pressure
+
+For detailed analysis, model calibration, sensitivity analysis, and discussion of limitations, see the associated publication.
 
 ## Repository Structure
 
@@ -32,16 +44,21 @@ years (60 steps)
 ## Installation
 
 Clone the repository:
+```bash
 git clone <your-repository-link>
 cd RHEA-NL
+```
 
 Install dependencies:
+```bash
 pip install -r requirements.txt
+```
 
 ## Running the Model
 
+```bash
 python run.py --config single_run_scenarios.yaml --scenario S1d
-
+```
 Available scenarios:
 - S1a
 - S1d
@@ -53,7 +70,7 @@ The original housing transaction data are provided by NVM and are subject to a n
 
 This repository includes a synthetic/dummy dataset for demonstration purposes that does not represent real transactions.
 
-Users must provide their own dataset for meaningful outcomes. 
+Users must provide their own calibrated dataset for empirical applications and meaningful scenario analysis.
 
 ### Expected data format
 
