@@ -1,5 +1,5 @@
 _paths:
-  # You can use absolute paths OR paths relative to this YAML file.
+  # Provide your paths
   dataset_csv: "YOUR PATH"
   results_dir: "YOUR PATH"
 
