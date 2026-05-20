@@ -43,11 +43,9 @@ For detailed analysis, model calibration, sensitivity analysis, and discussion o
 
 ## Installation
 
-Clone the repository:
-```bash
-git clone <your-repository-link>
-cd RHEA-NL
-```
+git clone https://github.com/SC3-TUD/CEUS-RHEA_NL.git
+cd CEUS-RHEA_NL
+pip install -r requirements.txt
 
 Install dependencies:
 ```bash
@@ -64,13 +62,9 @@ Available scenarios:
 - S1d
 - S3
 
-## Data Availability
+## Reproducibility
 
-The original housing transaction data are provided by NVM and are subject to a non-disclosure agreement. Therefore, these data cannot be shared publicly.
-
-This repository includes a synthetic/dummy dataset for demonstration purposes that does not represent real transactions.
-
-Users must provide their own calibrated dataset for empirical applications and meaningful scenario analysis.
+Due to data-sharing restrictions, the original NVM housing transaction data used in the paper cannot be redistributed. The repository therefore includes a synthetic dummy dataset to demonstrate the model workflow and code structure. Results reported in the paper require access to the calibrated empirical input dataset and scenario settings described in the publication.
 
 ### Expected data format
 
